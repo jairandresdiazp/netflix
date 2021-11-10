@@ -1,0 +1,170 @@
+:root {
+  --rojo: #e50914;
+  --gris: #aaaaaa;
+  --blanco: #ffffff;
+  --negro: #000000;
+  --fondo: #141414;
+}
+
+/*Inicio Iconos*/
+
+.fas::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.fab::before {
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: "Font Awesome 5 Brands";
+  font-weight: 400;
+}
+
+.fa-play {
+  content: "\f04b";
+}
+
+.fa-info-circle {
+  content: "\f05a";
+}
+
+/*Fin Iconos*/
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--fondo);
+  font-family: "Open Sans", sans-serif;
+}
+
+.contenedor {
+  width: 90%;
+  margin: auto;
+}
+
+/*Inicio Header*/
+
+header.contenedor {
+  padding: 20px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo {
+  font-family: "Bebas Neue", cursive;
+  color: var(--rojo);
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+header nav a,
+header nav a:visited {
+  color: var(--gris);
+  text-decoration: none;
+  margin-right: 1.25rem;
+}
+
+header nav a:last-of-type {
+  margin-right: 0px;
+}
+
+header nav a:hover,
+header nav a.active {
+  color: var(--blanco);
+}
+
+/*Fin Header*/
+
+/*Inicio Destacado*/
+.destacado {
+  font-size: 16px;
+  min-height: 40.62em;
+  color: var(--blanco);
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.5) 0%,
+      rgba(0, 0, 0, 0.5) 100%
+    ),
+    url("../assets/img/backdrop.jpg");
+  background-position: center center;
+  background-size: cover;
+  margin-bottom: 2.5rem;
+  display: flex;
+  align-items: flex-end;
+}
+
+.destacado .contenedor {
+  margin: 0px auto 6.25em auto;
+}
+
+.destacado .titulo {
+  font-weight: 600;
+  font-size: 3.12em;
+  margin-bottom: 0.4em;
+}
+
+.destacado .descripcion {
+  font-weight: normal;
+  font-size: 1em;
+  line-height: 1.75em;
+  max-width: 50%;
+  margin-bottom: 1.25em;
+}
+
+.destacado .boton {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 0.31em;
+  padding: 0.93em 1.87em;
+  color: var(--blanco);
+  margin-right: 1.25em;
+  cursor: pointer;
+  transition: 0.3s ease all;
+  font-size: 1.12em;
+}
+
+.destacado .boton:hover {
+  background-color: var(--blanco);
+  color: var(--negro);
+}
+
+.destacado .boton i {
+  margin-right: 1em;
+}
+/*Fin Destacado*/
+
+/*Inicio Responsive*/
+
+@media screen and (max-width: 800px) {
+  header .logo {
+    font-size: 0.7rem;
+    margin-bottom: 1em;
+  }
+
+  header.contenedor {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .destacado {
+    font-size: 14px;
+  }
+
+  .destacado .descripcion {
+    max-width: 100%;
+  }
+}
+
+/*Fin Responsive*/
